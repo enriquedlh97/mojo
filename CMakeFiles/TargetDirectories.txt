@@ -1,0 +1,3 @@
+/workspaces/mojo/CMakeFiles/fibm_module.dir
+/workspaces/mojo/CMakeFiles/edit_cache.dir
+/workspaces/mojo/CMakeFiles/rebuild_cache.dir

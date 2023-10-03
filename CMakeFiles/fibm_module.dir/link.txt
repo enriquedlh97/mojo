@@ -1,0 +1,1 @@
+/usr/bin/c++ -fPIC -flto -shared  -o fibm_module.cpython-310-x86_64-linux-gnu.so CMakeFiles/fibm_module.dir/fibm.cpp.o 
