@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = -Dfibm_module_EXPORTS
 
-CXX_INCLUDES = -isystem /usr/local/python/3.10.8/lib/python3.10/site-packages/pybind11/include -isystem /home/codespace/.python/current/include/python3.10
+CXX_INCLUDES = -isystem /opt/conda/envs/env/lib/python3.11/site-packages/pybind11/include -isystem /opt/conda/envs/env/include/python3.11
 
 CXX_FLAGS = -std=gnu++14 -fPIC -fvisibility=hidden -flto -fno-fat-lto-objects
 

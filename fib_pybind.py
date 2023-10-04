@@ -1,14 +1,14 @@
 from time import time
-from fibm_module import fibm, fibonacci_matrix
+from fibm_module import fibm as fib_pybind
 import numpy as np
 from numpy.typing import NDArray
-
+from mypyc_fib import fib_mypyc, fib_np_mypyc
 
 def fib_np(n: int) -> int:
     if n <= 0:
         return 0
     elif n == 1:
-        return
+        return 1
     else:
         matrix: NDArray = np.array(
             [
@@ -21,43 +21,27 @@ def fib_np(n: int) -> int:
         result: NDArray = np.linalg.matrix_power(matrix, n - 1)
 
         return result[0, 0]
-
     
-def run_python_benchmark_numpy():
+
+def fib_python(n):
+    return n if n < 2 else fib_python(n - 1) + fib_python(n - 2)
+
+
+def run_python_benchmark(function_name, n):
     t0 = time()
-    ans = fib_np(40)
+    ans = function_name(n)
     t1 = time()
-    print(f'NUMPY: Computed fib(40) = {ans} in {t1 - t0} seconds.')
+    return f'Computed fib({n}) = {ans} in\t{round(t1 - t0, 4)} seconds.'
 
 
-def run_python_benchmark_pybind_matrix():
-    t0 = time()
-    ans = fibonacci_matrix(40)
-    t1 = time()
-    print(f'MATRIX PYBIND: Computed fib(40) = {ans} in {t1 - t0} seconds.')
-
-def run_python_benchmark_pybind():
-    t0 = time()
-    ans = fibm(40)
-    t1 = time()
-    print(f'PYBIND: Computed fib(40) = {ans} in {t1 - t0} seconds.')
+def main():
+    n = 50
+    print(f"NUMPY MYPYC: {run_python_benchmark(fib_np_mypyc, n)}")
+    print(f"      NUMPY: {run_python_benchmark(fib_np, n)}")
+    print(f"     PYBIND: {run_python_benchmark(fib_pybind, n)}")
+    print(f"      MYPYC: {run_python_benchmark(fib_mypyc, n)}")
+    print(f"     PYTHON: {run_python_benchmark(fib_python, n)}")
 
 
-
-def fib(n):
-    return n if n < 2 else fib(n - 1) + fib(n - 2)
-
-
-def run_python_benchmark():
-    t0 = time()
-    ans = fib(40)
-    t1 = time()
-    print(f'PYTHON: Computed fib(40) = {ans} in {t1 - t0} seconds.')
-
-run_python_benchmark_pybind()
-# Computed fib(40) = 102334155 in 21.669286727905273 seconds.
-run_python_benchmark()
-
-run_python_benchmark_numpy()
-
-run_python_benchmark_pybind_matrix()
+if __name__ == "__main__":
+    main()

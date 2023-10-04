@@ -223,10 +223,10 @@ PYBIND11_PYTHONLIBS_OVERWRITE:BOOL=ON
 PYBIND11_PYTHON_VERSION:STRING=
 
 //Path to a program.
-PYTHON_EXECUTABLE:FILEPATH=/home/codespace/.python/current/bin/python3
+PYTHON_EXECUTABLE:FILEPATH=/opt/conda/envs/env/bin/python
 
 //Path to a library.
-PYTHON_LIBRARY:FILEPATH=/usr/local/python/3.10.8/lib/libpython3.10.a
+PYTHON_LIBRARY:FILEPATH=/opt/conda/envs/env/lib/libpython3.11.so
 
 //Value Computed by CMake
 fibm_module_BINARY_DIR:STATIC=/workspaces/mojo
@@ -388,27 +388,27 @@ CMAKE_UNAME:INTERNAL=/usr/bin/uname
 //ADVANCED property for variable: CMAKE_VERBOSE_MAKEFILE
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
 //Details about finding PYTHON
-FIND_PACKAGE_MESSAGE_DETAILS_PYTHON:INTERNAL=/home/codespace/.python/current/bin/python33.10.8
+FIND_PACKAGE_MESSAGE_DETAILS_PYTHON:INTERNAL=/opt/conda/envs/env/bin/python3.11.5
 //Details about finding PythonInterp
-FIND_PACKAGE_MESSAGE_DETAILS_PythonInterp:INTERNAL=[/home/codespace/.python/current/bin/python3][v3.10.8(3.6)]
+FIND_PACKAGE_MESSAGE_DETAILS_PythonInterp:INTERNAL=[/opt/conda/envs/env/bin/python][v3.11.5(3.6)]
 //Test HAS_FLTO
 HAS_FLTO:INTERNAL=1
 //ADVANCED property for variable: PYTHON_EXECUTABLE
 PYTHON_EXECUTABLE-ADVANCED:INTERNAL=1
-PYTHON_INCLUDE_DIRS:INTERNAL=/home/codespace/.python/current/include/python3.10
+PYTHON_INCLUDE_DIRS:INTERNAL=/opt/conda/envs/env/include/python3.11
 PYTHON_IS_DEBUG:INTERNAL=0
-PYTHON_LIBRARIES:INTERNAL=/usr/local/python/3.10.8/lib/libpython3.10.a
+PYTHON_LIBRARIES:INTERNAL=/opt/conda/envs/env/lib/libpython3.11.so
 //ADVANCED property for variable: PYTHON_LIBRARY
 PYTHON_LIBRARY-ADVANCED:INTERNAL=1
-PYTHON_MODULE_EXTENSION:INTERNAL=.cpython-310-x86_64-linux-gnu.so
+PYTHON_MODULE_EXTENSION:INTERNAL=.cpython-311-x86_64-linux-gnu.so
 PYTHON_MODULE_PREFIX:INTERNAL=
-PYTHON_VERSION:INTERNAL=3.10.8
+PYTHON_VERSION:INTERNAL=3.11.5
 PYTHON_VERSION_MAJOR:INTERNAL=3
-PYTHON_VERSION_MINOR:INTERNAL=10
+PYTHON_VERSION_MINOR:INTERNAL=11
 Python_ADDITIONAL_VERSIONS:INTERNAL=3.11;3.10;3.9;3.8;3.7;3.6
 //linker supports push/pop state
 _CMAKE_LINKER_PUSHPOP_STATE_SUPPORTED:INTERNAL=TRUE
 _Python:INTERNAL=PYTHON
 //Directories where pybind11 and possibly Python headers are located
-pybind11_INCLUDE_DIRS:INTERNAL=/usr/local/python/3.10.8/lib/python3.10/site-packages/pybind11/include;/home/codespace/.python/current/include/python3.10
+pybind11_INCLUDE_DIRS:INTERNAL=/opt/conda/envs/env/lib/python3.11/site-packages/pybind11/include;/opt/conda/envs/env/include/python3.11
 

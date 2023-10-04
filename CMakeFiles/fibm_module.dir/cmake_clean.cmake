@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/fibm_module.dir/fibm.cpp.o"
   "CMakeFiles/fibm_module.dir/fibm.cpp.o.d"
-  "fibm_module.cpython-310-x86_64-linux-gnu.so"
+  "fibm_module.cpython-311-x86_64-linux-gnu.so"
   "fibm_module.pdb"
 )
 

@@ -27,26 +27,10 @@ int fibonacci_matrix(int n) {
 }
 
 // Wrapper function to call the fibonacci_matrix function with an integer input
-int fibonacci_matrix_wrapper_2(int n) {
-    return fibonacci_matrix(n);
-}
-
-PYBIND11_MODULE(fibm_module_extended, m) {
-    m.def("fibm", &fibm, "Calculate Fibonacci number using C++");
-    m.def("fibonacci_matrix", &fibonacci_matrix_wrapper_2, "Calculate Fibonacci number using matrix exponentiation");
-}
-
-
-
-
-
-
-
-
-// Wrapper function to call the fibonacci_matrix function with an integer input
 int fibonacci_matrix_wrapper(int n) {
     return fibonacci_matrix(n);
 }
+
 
 PYBIND11_MODULE(fibm_module, m) {
     m.def("fibm", &fibm, "Calculate Fibonacci number using C++");
