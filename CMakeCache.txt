@@ -237,9 +237,6 @@ fibm_module_IS_TOP_LEVEL:STATIC=ON
 //Value Computed by CMake
 fibm_module_SOURCE_DIR:STATIC=/workspaces/mojo
 
-//The directory containing a CMake configuration file for pybind11.
-pybind11_DIR:PATH=pybind11_DIR-NOTFOUND
-
 
 ########################
 # INTERNAL cache entries
