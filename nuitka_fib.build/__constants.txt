@@ -1,0 +1,1 @@
+{"__bytecode.const": {"input_size": 0, "blob_name": ".bytecode", "blob_size": 3}, "__constants.const": {"input_size": 1770, "blob_name": "", "blob_size": 747}, "module.nuitka_fib.const": {"input_size": 660, "blob_name": "nuitka_fib", "blob_size": 374}, "total": 113}

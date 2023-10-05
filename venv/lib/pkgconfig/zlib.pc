@@ -1,0 +1,13 @@
+prefix=/workspaces/mojo/venv
+exec_prefix=/workspaces/mojo/venv
+libdir=/workspaces/mojo/venv/lib
+sharedlibdir=/workspaces/mojo/venv/lib
+includedir=/workspaces/mojo/venv/include
+
+Name: zlib
+Description: zlib compression library
+Version: 1.2.13
+
+Requires:
+Libs: -L${libdir} -L${sharedlibdir} -lz
+Cflags: -I${includedir}

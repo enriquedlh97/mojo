@@ -3,6 +3,7 @@ from fibm_module import fibm as fib_pybind
 import numpy as np
 from numpy.typing import NDArray
 from mypyc_fib import fib_mypyc, fib_np_mypyc
+from nuitka_fib import fib_nuitka#, fib_np_nuitka
 
 def fib_np(n: int) -> int:
     if n <= 0:
@@ -35,11 +36,12 @@ def run_python_benchmark(function_name, n):
 
 
 def main():
-    n = 50
+    n = 40
     print(f"NUMPY MYPYC: {run_python_benchmark(fib_np_mypyc, n)}")
     print(f"      NUMPY: {run_python_benchmark(fib_np, n)}")
     print(f"     PYBIND: {run_python_benchmark(fib_pybind, n)}")
     print(f"      MYPYC: {run_python_benchmark(fib_mypyc, n)}")
+    print(f"      NUITKA: {run_python_benchmark(fib_nuitka, n)}")
     print(f"     PYTHON: {run_python_benchmark(fib_python, n)}")
 
 
